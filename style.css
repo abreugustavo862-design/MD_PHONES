@@ -1,13 +1,26 @@
-/* IMPORTANDO FONTE DE ALTO PADRÃO */
+/* IMPORTANDO FONTE DE ALTO PADRÃO (INTER) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+}
 
-body { background-color: #ffffff; color: #1a1a1a; scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
-/* HEADER */
+body { 
+    background-color: #ffffff; 
+    color: #1a1a1a; 
+    line-height: 1.6;
+}
+
+/* --- HEADER SOFISTICADO --- */
 header { 
-    background: #fff; 
+    background: #ffffff; 
     padding: 20px 5%; 
     display: flex; 
     justify-content: space-between; 
@@ -18,9 +31,14 @@ header {
     z-index: 1000;
 }
 
-.logo { font-size: 20px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; }
+.logo { 
+    font-size: 18px; 
+    font-weight: 600; 
+    letter-spacing: 4px; 
+    text-transform: uppercase; 
+}
 
-/* SEÇÃO HERO (PRETO ESFUMAÇADO) */
+/* --- SEÇÃO HERO (PRETO ESFUMAÇADO ESTILO LEGATTA) --- */
 .hero { 
     padding: 120px 5%; 
     text-align: center; 
@@ -47,74 +65,164 @@ header {
     background: #ffffff;
     color: #000000;
     border: none;
-    padding: 18px 40px;
+    padding: 18px 45px;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    border-radius: 4px;
 }
 
-.hero button:hover { background: #d4d4d4; transform: scale(1.05); }
+.hero button:hover { 
+    background: #d4d4d4; 
+    transform: scale(1.05); 
+}
 
-/* VITRINE DE MODELOS */
-.vitrine { padding: 80px 5%; max-width: 1400px; margin: 0 auto; }
-.vitrine h2 { font-size: 24px; font-weight: 400; margin-bottom: 60px; text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+/* --- VITRINE (ESTILO APPLE STORE) --- */
+.vitrine { 
+    padding: 100px 5%; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+.vitrine h2 { 
+    font-size: 24px; 
+    font-weight: 400; 
+    margin-bottom: 70px; 
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+}
 
 .container-modelos { 
     display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 40px; 
 }
 
+/* --- CARD DO IPHONE --- */
 .modelo-card { 
-    background: #fff; 
+    background: #ffffff; 
     border: 1px solid #f2f2f2;
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .modelo-card:hover { 
-    transform: translateY(-8px); 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transform: translateY(-10px); 
+    box-shadow: 0 30px 60px rgba(0,0,0,0.06);
 }
 
-.modelo-info { padding: 30px; flex-grow: 1; }
+/* CONTAINER DA IMAGEM OFICIAL */
+.iphone-img-container {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfb; /* Cinza Apple muito sutil */
+    margin-bottom: 10px;
+    overflow: hidden;
+}
 
-.modelo-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 15px; color: #000; text-transform: uppercase; }
+.iphone-img-container img {
+    max-height: 80%;
+    width: auto;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
-.modelo-card p { font-size: 12px; color: #888; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.modelo-card:hover .iphone-img-container img {
+    transform: scale(1.1);
+}
 
-.modelo-card strong { color: #1a1a1a; }
+/* INFORMAÇÕES DO PRODUTO */
+.modelo-info { 
+    padding: 30px; 
+    flex-grow: 1; 
+    text-align: center;
+}
 
 .tag-garantia { 
     display: inline-block; 
     font-size: 10px; 
     font-weight: 600;
-    color: #bfa37e; /* Dourado Legatta */
+    color: #bfa37e; /* Dourado Premium */
     margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
+.modelo-card h3 { 
+    font-size: 22px; 
+    font-weight: 600; 
+    margin-bottom: 15px; 
+    color: #1a1a1a; 
+    letter-spacing: -0.5px;
+}
+
+.modelo-card p { 
+    font-size: 12px; 
+    color: #888; 
+    margin-bottom: 8px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+}
+
+.modelo-card strong { 
+    color: #1a1a1a; 
+}
+
+/* BOTÃO CONSULTAR */
 .modelo-card button { 
     background: #1a1a1a; 
     color: #fff; 
     border: none; 
-    padding: 20px; 
+    padding: 22px; 
     cursor: pointer; 
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     transition: 0.3s;
 }
 
-.modelo-card button:hover { background: #000; }
+.modelo-card button:hover { 
+    background: #000000; 
+}
 
-/* RODAPÉ */
-footer { padding: 100px 5% 50px; text-align: center; border-top: 1px solid #f7f7f7; }
-footer p { font-size: 18px; font-weight: 300; font-style: italic; color: #777; margin-bottom: 20px; }
-.footer-brand { font-size: 10px; font-weight: 600; letter-spacing: 3px; color: #bfa37e; text-transform: uppercase; }
+/* --- RODAPÉ MINIMALISTA --- */
+footer { 
+    padding: 120px 5% 60px; 
+    text-align: center; 
+    border-top: 1px solid #f2f2f2; 
+}
+
+footer p { 
+    font-size: 18px; 
+    font-weight: 300; 
+    font-style: italic; 
+    color: #666; 
+    margin-bottom: 25px; 
+    letter-spacing: 0.5px;
+}
+
+.footer-brand { 
+    font-size: 10px; 
+    font-weight: 600; 
+    letter-spacing: 3px; 
+    color: #bfa37e; 
+    text-transform: uppercase; 
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 34px; }
+    .hero p { font-size: 16px; }
+    .container-modelos { grid-template-columns: 1fr; gap: 25px; }
+    .iphone-img-container { height: 240px; }
+}
