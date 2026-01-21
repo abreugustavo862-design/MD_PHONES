@@ -1,0 +1,120 @@
+/* IMPORTANDO FONTE DE ALTO PADRÃO */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body { background-color: #ffffff; color: #1a1a1a; scroll-behavior: smooth; }
+
+/* HEADER */
+header { 
+    background: #fff; 
+    padding: 20px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 20px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; }
+
+/* SEÇÃO HERO (PRETO ESFUMAÇADO) */
+.hero { 
+    padding: 120px 5%; 
+    text-align: center; 
+    background: radial-gradient(circle, #232323 0%, #000000 100%);
+    color: #ffffff;
+}
+
+.hero h1 { 
+    font-size: 48px; 
+    font-weight: 300; 
+    margin-bottom: 20px; 
+    letter-spacing: -1px;
+}
+
+.hero p { 
+    color: #b3b3b3; 
+    font-size: 18px; 
+    max-width: 650px; 
+    margin: 0 auto 40px; 
+    font-weight: 300;
+}
+
+.hero button {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 18px 40px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover { background: #d4d4d4; transform: scale(1.05); }
+
+/* VITRINE DE MODELOS */
+.vitrine { padding: 80px 5%; max-width: 1400px; margin: 0 auto; }
+.vitrine h2 { font-size: 24px; font-weight: 400; margin-bottom: 60px; text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+
+.container-modelos { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 30px; 
+}
+
+.modelo-card { 
+    background: #fff; 
+    border: 1px solid #f2f2f2;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.modelo-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.modelo-info { padding: 30px; flex-grow: 1; }
+
+.modelo-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 15px; color: #000; text-transform: uppercase; }
+
+.modelo-card p { font-size: 12px; color: #888; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.modelo-card strong { color: #1a1a1a; }
+
+.tag-garantia { 
+    display: inline-block; 
+    font-size: 10px; 
+    font-weight: 600;
+    color: #bfa37e; /* Dourado Legatta */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modelo-card button { 
+    background: #1a1a1a; 
+    color: #fff; 
+    border: none; 
+    padding: 20px; 
+    cursor: pointer; 
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.modelo-card button:hover { background: #000; }
+
+/* RODAPÉ */
+footer { padding: 100px 5% 50px; text-align: center; border-top: 1px solid #f7f7f7; }
+footer p { font-size: 18px; font-weight: 300; font-style: italic; color: #777; margin-bottom: 20px; }
+.footer-brand { font-size: 10px; font-weight: 600; letter-spacing: 3px; color: #bfa37e; text-transform: uppercase; }
